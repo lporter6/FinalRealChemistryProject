@@ -45,7 +45,7 @@ public class MolarMass {
 		c.gridy = 0;
 		c.gridwidth = 2;
 		molarMassPanel.add(new JLabel("Enter in label for elements and check their subscripts in the combo box"),c); 
-		c.gridwidth = 1; //reseting the gridwidth so that other JComponents don't also occupy 2 grids
+		c.gridwidth = 1; //reseting the gridwidth so that other JComponents don'tempTextField1 also occupy 2 grids
 		
 		c.gridx = 0;
 		c.gridy = 1;

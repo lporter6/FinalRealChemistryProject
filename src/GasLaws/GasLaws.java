@@ -59,18 +59,18 @@ public class GasLaws {
 		public static JPanel tempNT_Panel = new JPanel();
 
 	//Text fields for the four different inputs 
-	public static JTextField p = new JTextField(5);
-	public static JTextField v = new JTextField(5);
-	public static JTextField n = new JTextField(5);
-	public static JTextField t = new JTextField(5);
+	public static JTextField pressureTextField1 = new JTextField(5);
+	public static JTextField volumeTextField1 = new JTextField(5);
+	public static JTextField molesTextField1 = new JTextField(5);
+	public static JTextField tempTextField1 = new JTextField(5);
 	
 	//Makes the secondary text fields for use in the equations
-	public static JTextField p2 = new JTextField(5);
-	public static JTextField v2 = new JTextField(5);
-	public static JTextField n2 = new JTextField(5);
-	public static JTextField t2 = new JTextField(5);
+	public static JTextField pressureTextField2 = new JTextField(5);
+	public static JTextField volumeTextField2 = new JTextField(5);
+	public static JTextField molesTextField2 = new JTextField(5);
+	public static JTextField tempTextField2 = new JTextField(5);
 	
-	public static JTextField[] textFieldsGasLaws = {p,v,n,t,p2,v2,n2,t2};
+	public static JTextField[] textFieldsGasLaws = {pressureTextField1, volumeTextField1, molesTextField1, tempTextField1, pressureTextField2, volumeTextField2, molesTextField2, tempTextField2};
 	
 	//Creates the main JLabel
 	public static JLabel answerGasLaws = new JLabel("Your answer will be printed in this location");	
@@ -87,14 +87,14 @@ public class GasLaws {
 	public static double step;
 
 	//Makes the values that will take the input from the text fields and they will be used in the equations 
-	public static double p3;
-	public static double v3;
-	public static double n3;
-	public static double t3;
-	public static double p4;
-	public static double v4;
-	public static double n4;
-	public static double t4;
+	public static double pressuredouble1;
+	public static double volumedouble1;
+	public static double molesdouble1;
+	public static double tempdouble1;
+	public static double pressuredouble2;
+	public static double volumedouble2;
+	public static double molesdouble2;
+	public static double tempdouble2;
 
 	//Makes the GridBagConstraints to place all of the text fields and JLabels and such
 	public static GridBagConstraints bag = Start.c;
@@ -106,7 +106,33 @@ public class GasLaws {
 		
 			//Sets the layout
 			gasLawsPanel.setLayout(new GridBagLayout());
+
 			volumePanel.setLayout(new GridBagLayout());
+				volumePV_Panel.setLayout(new GridBagLayout());
+				volumePVT_Panel.setLayout(new GridBagLayout());
+				volumeVN_Panel.setLayout(new GridBagLayout());
+				volumeVT_Panel.setLayout(new GridBagLayout());
+				volumePVnRT_Panel.setLayout(new GridBagLayout());
+
+			pressurePanel.setLayout(new GridBagLayout());
+				pressurePVT_Panel.setLayout(new GridBagLayout());
+				pressurePV_Panel.setLayout(new GridBagLayout());
+				pressurePT_Panel.setLayout(new GridBagLayout());
+				pressurePN_Panel.setLayout(new GridBagLayout());
+				pressurePVnRT_Panel.setLayout(new GridBagLayout());
+
+			molesPanel.setLayout(new GridBagLayout());
+				molesNT_Panel.setLayout(new GridBagLayout());
+				molesPN_Panel.setLayout(new GridBagLayout());
+				molesPVnRT_Panel.setLayout(new GridBagLayout());
+				molesVN_Panel.setLayout(new GridBagLayout());
+
+			tempPanel.setLayout(new GridBagLayout());
+				tempPVT_Panel.setLayout(new GridBagLayout());
+				tempNT_Panel.setLayout(new GridBagLayout());
+				tempPT_Panel.setLayout(new GridBagLayout());
+				tempPVnRT_Panel.setLayout(new GridBagLayout());
+				tempVT_Panel.setLayout(new GridBagLayout());
 			
 			//Makes the Volume Button and sets position
 			bag.gridx = 0;
@@ -114,7 +140,6 @@ public class GasLaws {
 			GasLaws.volumeButton.setActionCommand("Volume Enter"); 
 			GasLaws.volumeButton.addActionListener(Start.al1); 
 			gasLawsPanel.add(GasLaws.volumeButton, bag);
-			volumePanel.add(GasLaws.enterButtonGasLaws, bag);
 			
 			//Makes the Pressure Button and sets position
 			bag.gridx = 1;
@@ -149,19 +174,19 @@ public class GasLaws {
 				//PV equation being set up
 				bag.gridx = 0;
 				bag.gridy = 0;
-				volumePanel.add(v,bag);
+				volumePV_Panel.add(volumeTextField1,bag);
 		
 				bag.gridx = 1;
 				bag.gridy = 0;
-				volumePanel.add(new JLabel("="));
+				volumePV_Panel.add(new JLabel("="));
 		
 				bag.gridx = 2;
 				bag.gridy = 0;
-				volumePanel.add(p2,bag);
+				volumePV_Panel.add(pressureTextField2,bag);
 		
 				bag.gridx = 3;
 				bag.gridy = 0;
-				volumePanel.add(v2,bag);
+				volumePV_Panel.add(volumeTextField2,bag);
 			
 			//Adds enter button to volumeVN_Panel
 			bag.gridx = 0;
@@ -173,15 +198,19 @@ public class GasLaws {
 				//VN equation being setup
 				bag.gridx = 0;
 				bag.gridy = 0;
-				gasLawsPanel.add(n,bag);
+				volumeVN_Panel.add(molesTextField1,bag);
+
+				bag.gridx = 1;
+				bag.gridy = 0;
+				volumeVN_Panel.add(new JLabel("="));
 				
 				bag.gridx = 2;
 				bag.gridy = 0;
-				gasLawsPanel.add(v2,bag);
+				volumeVN_Panel.add(volumeTextField2,bag);
 	
 				bag.gridx = 3;
 				bag.gridy = 0;
-				gasLawsPanel.add(n2,bag);
+				volumeVN_Panel.add(molesTextField2,bag);
 			
 			//Adds enter button to volumePVT_Panel
 			bag.gridx = 0;
@@ -193,23 +222,27 @@ public class GasLaws {
 				//PVT equation being setup
 				bag.gridx = 0;
 				bag.gridy = 0;
-				volumePVT_Panel.add(p,bag);
+				volumePVT_Panel.add(pressureTextField1,bag);
 				
 				bag.gridx = 1;
 				bag.gridy = 0;
-				volumePVT_Panel.add(t,bag);
+				volumePVT_Panel.add(tempTextField1,bag);
+
+				bag.gridx = 1;
+				bag.gridy = 0;
+				volumePVT_Panel.add(new JLabel("="));
 				
 				bag.gridx = 3;
 				bag.gridy = 0;
-				volumePVT_Panel.add(p2,bag);
+				volumePVT_Panel.add(pressureTextField2,bag);
 				
 				bag.gridx = 4;
 				bag.gridy = 0;
-				volumePVT_Panel.add(v2,bag);
+				volumePVT_Panel.add(volumeTextField2,bag);
 				
 				bag.gridx = 5;
 				bag.gridy = 0;
-				volumePVT_Panel.add(t2,bag);
+				volumePVT_Panel.add(tempTextField2,bag);
 			
 			//Adds enter button to volumeVT_Panel
 			bag.gridx = 0;
@@ -221,19 +254,19 @@ public class GasLaws {
 				//VT equation being set up
 				bag.gridx = 0;
 				bag.gridy = 0;
-				gasLawsPanel.add(t,bag);
+				volumeVT_Panel.add(tempTextField1,bag);
 				
 				bag.gridx = 1;
 				bag.gridy = 0;
-				volumePanel.add(new JLabel("="));
+				volumeVT_Panel.add(new JLabel("="));
 				
 				bag.gridx = 2;
 				bag.gridy = 0;
-				gasLawsPanel.add(v2,bag);
+				volumeVT_Panel.add(volumeTextField2,bag);
 	
 				bag.gridx = 3;
 				bag.gridy = 0;
-				gasLawsPanel.add(t2,bag);
+				volumeVT_Panel.add(tempTextField2,bag);
 			
 			//Adds enter button to volumePVnRT_Panel 
 			bag.gridx = 0;
@@ -245,19 +278,23 @@ public class GasLaws {
 				//PVnRT equation being setup
 				bag.gridx = 0;
 				bag.gridy = 0;
-				gasLawsPanel.add(p,bag);
+				volumePVnRT_Panel.add(pressureTextField1,bag);
 	
 				bag.gridx = 1;
 				bag.gridy = 0;
-				gasLawsPanel.add(v,bag);
+				volumePVnRT_Panel.add(volumeTextField1,bag);
+
+				bag.gridx = 1;
+				bag.gridy = 0;
+				volumePVnRT_Panel.add(new JLabel("="));
 	
 				bag.gridx = 2;
 				bag.gridy = 0;
-				gasLawsPanel.add(n,bag);
+				volumePVnRT_Panel.add(molesTextField1,bag);
 	
 				bag.gridx = 3;
 				bag.gridy = 0;
-				gasLawsPanel.add(t,bag);
+				volumePVnRT_Panel.add(tempTextField1,bag);
 		
 		//Pressure Panels
 			
@@ -271,19 +308,19 @@ public class GasLaws {
 				//PV equation being setup
 				bag.gridx = 0;
 				bag.gridy = 0;
-				pressurePV_Panel.add(v,bag);
+				pressurePV_Panel.add(volumeTextField1,bag);
 				
 				bag.gridx = 1;
 				bag.gridy = 0;
-				volumePanel.add(new JLabel("="));
+				pressurePV_Panel.add(new JLabel("="));
 	
 				bag.gridx = 2;
 				bag.gridy = 0;
-				pressurePV_Panel.add(p2,bag);
+				pressurePV_Panel.add(pressureTextField2,bag);
 	
 				bag.gridx = 3;
 				bag.gridy = 0;
-				pressurePV_Panel.add(v2,bag);
+				pressurePV_Panel.add(volumeTextField2,bag);
 			
 			//Adds enter button to pressurePT_Panel
 			bag.gridx = 0;
@@ -295,15 +332,19 @@ public class GasLaws {
 				//PT equation being set up
 				bag.gridx = 0;
 				bag.gridy = 0;
-				gasLawsPanel.add(t,bag);
+				pressurePT_Panel.add(tempTextField1,bag);
+
+				bag.gridx = 1;
+				bag.gridy = 0;
+				pressurePT_Panel.add(new JLabel("="));
 				
 				bag.gridx = 2;
 				bag.gridy = 0;
-				gasLawsPanel.add(p2,bag);
+				pressurePT_Panel.add(pressureTextField2,bag);
 	
 				bag.gridx = 3;
 				bag.gridy = 0;
-				gasLawsPanel.add(t2,bag);
+				pressurePT_Panel.add(tempTextField2,bag);
 			
 			//Adds enter button to pressurePVT_Panel
 			bag.gridx = 0;
@@ -315,23 +356,27 @@ public class GasLaws {
 				//PVT equation being set up
 				bag.gridx = 0;
 				bag.gridy = 0;
-				pressurePVT_Panel.add(v,bag);
+				pressurePVT_Panel.add(volumeTextField1,bag);
 				
 				bag.gridx = 1;
 				bag.gridy = 0;
-				pressurePVT_Panel.add(t,bag);
+				pressurePVT_Panel.add(tempTextField1,bag);
+
+				bag.gridx = 1;
+				bag.gridy = 0;
+				pressurePVT_Panel.add(new JLabel("="));
 				
 				bag.gridx = 3;
 				bag.gridy = 0;
-				pressurePVT_Panel.add(p2,bag);
+				pressurePVT_Panel.add(pressureTextField2,bag);
 				
 				bag.gridx = 4;
 				bag.gridy = 0;
-				pressurePVT_Panel.add(v2,bag);
+				pressurePVT_Panel.add(volumeTextField2,bag);
 				
 				bag.gridx = 5;
 				bag.gridy = 0;
-				pressurePVT_Panel.add(t2,bag);
+				pressurePVT_Panel.add(tempTextField2,bag);
 				
 			//Adds enter button to pressurePVnRT_Panel
 			bag.gridx = 0;
@@ -343,15 +388,19 @@ public class GasLaws {
 				//PVnRT equation being setup
 				bag.gridx = 1;
 				bag.gridy = 0;
-				gasLawsPanel.add(v,bag);
+				pressurePVnRT_Panel.add(volumeTextField1,bag);
+
+				bag.gridx = 1;
+				bag.gridy = 0;
+				pressurePVnRT_Panel.add(new JLabel("="));
 	
 				bag.gridx = 2;
 				bag.gridy = 0;
-				gasLawsPanel.add(n,bag);
+				pressurePVnRT_Panel.add(molesTextField1,bag);
 	
 				bag.gridx = 3;
 				bag.gridy = 0;
-				gasLawsPanel.add(t,bag);
+				pressurePVnRT_Panel.add(tempTextField1,bag);
 		
 		//Mole Panels
 			
@@ -365,15 +414,19 @@ public class GasLaws {
 				//VN equation being setup
 				bag.gridx = 0;
 				bag.gridy = 0;
-				gasLawsPanel.add(v,bag);
+				molesVN_Panel.add(volumeTextField1,bag);
+
+				bag.gridx = 1;
+				bag.gridy = 0;
+				molesVN_Panel.add(new JLabel("="));
 				
 				bag.gridx = 2;
 				bag.gridy = 0;
-				gasLawsPanel.add(v2,bag);
+				molesVN_Panel.add(volumeTextField2,bag);
 	
 				bag.gridx = 3;
 				bag.gridy = 0;
-				gasLawsPanel.add(n2,bag);
+				molesVN_Panel.add(molesTextField2,bag);
 			
 			bag.gridx = 0;
 			bag.gridy = 1;
@@ -397,15 +450,19 @@ public class GasLaws {
 				//PVnRT equation being setup
 				bag.gridx = 0;
 				bag.gridy = 0;
-				gasLawsPanel.add(p,bag);
+				molesPVnRT_Panel.add(pressureTextField1,bag);
 	
 				bag.gridx = 1;
 				bag.gridy = 0;
-				gasLawsPanel.add(v,bag);
+				molesPVnRT_Panel.add(volumeTextField1,bag);
+
+				bag.gridx = 2;
+				bag.gridy = 0;
+				molesPVnRT_Panel.add(new JLabel("="));
 	
 				bag.gridx = 3;
 				bag.gridy = 0;
-				gasLawsPanel.add(t,bag);
+				molesPVnRT_Panel.add(tempTextField1,bag);
 			
 		//Temperature Panels
 			
@@ -419,15 +476,19 @@ public class GasLaws {
 				//PT equation being setup
 				bag.gridx = 0;
 				bag.gridy = 0;
-				gasLawsPanel.add(p,bag);
+				tempPT_Panel.add(pressureTextField1,bag);
+
+				bag.gridx = 1;
+				bag.gridy = 0;
+				tempPT_Panel.add(new JLabel("="));
 				
 				bag.gridx = 2;
 				bag.gridy = 0;
-				gasLawsPanel.add(p,bag);
+				tempPT_Panel.add(pressureTextField2,bag);
 	
 				bag.gridx = 3;
 				bag.gridy = 0;
-				gasLawsPanel.add(t,bag);
+				tempPT_Panel.add(tempTextField1,bag);
 			
 			//Adds enter button to tempVT_Panel
 			bag.gridx = 0;
@@ -439,15 +500,19 @@ public class GasLaws {
 				//VT equation being setup 
 				bag.gridx = 0;
 				bag.gridy = 0;
-				gasLawsPanel.add(v,bag);
+				tempVT_Panel.add(volumeTextField1,bag);
+
+				bag.gridx = 1;
+				bag.gridy = 0;
+				tempVT_Panel.add(new JLabel("="));
 				
 				bag.gridx = 2;
 				bag.gridy = 0;
-				gasLawsPanel.add(v2,bag);
+				tempVT_Panel.add(volumeTextField2,bag);
 	
 				bag.gridx = 3;
 				bag.gridy = 0;
-				gasLawsPanel.add(t2,bag);
+				tempVT_Panel.add(tempTextField2,bag);
 			
 			//Adds enter button to tempNT_Panel
 			bag.gridx = 0;
@@ -466,23 +531,27 @@ public class GasLaws {
 				//PVT equation being setup
 				bag.gridx = 0;
 				bag.gridy = 0;
-				tempPVT_Panel.add(p,bag);
+				tempPVT_Panel.add(pressureTextField1,bag);
 				
 				bag.gridx = 1;
 				bag.gridy = 0;
-				tempPVT_Panel.add(v,bag);
+				tempPVT_Panel.add(volumeTextField1,bag);
+
+				bag.gridx = 2;
+				bag.gridy = 0;
+				tempPVT_Panel.add(new JLabel("="));
 				
 				bag.gridx = 3;
 				bag.gridy = 0;
-				tempPVT_Panel.add(p2,bag);
+				tempPVT_Panel.add(pressureTextField2,bag);
 				
 				bag.gridx = 4;
 				bag.gridy = 0;
-				tempPVT_Panel.add(v2,bag);
+				tempPVT_Panel.add(volumeTextField2,bag);
 				
 				bag.gridx = 5;
 				bag.gridy = 0;
-				tempPVT_Panel.add(t2,bag);
+				tempPVT_Panel.add(tempTextField2,bag);
 			
 			//Adds enter button to tempPVnRT_Panel
 			bag.gridx = 0;
@@ -494,15 +563,19 @@ public class GasLaws {
 				//PVnRT being setup
 				bag.gridx = 0;
 				bag.gridy = 0;
-				gasLawsPanel.add(p,bag);
+				tempPVnRT_Panel.add(pressureTextField1,bag);
 	
 				bag.gridx = 1;
 				bag.gridy = 0;
-				gasLawsPanel.add(v,bag);
+				tempPVnRT_Panel.add(volumeTextField1,bag);
+
+				bag.gridx = 2;
+				bag.gridy = 0;
+				tempPVnRT_Panel.add(new JLabel("="));
 	
 				bag.gridx = 3;
 				bag.gridy = 0;
-				gasLawsPanel.add(n,bag);
+				tempPVnRT_Panel.add(molesTextField1,bag);
 	}
 
 	public static void v(){
@@ -524,53 +597,53 @@ public class GasLaws {
 	public static void checker(){
 		for(int i = 0; i<9;i++){
 			if(i == 0){
-				if(v.getText().trim().length() == 0){
+				if(volumeTextField1.getText().trim().length() == 0){
 					
-				}else if(v.getText().trim().length() > 0){
-					v3 = Double.parseDouble(v.getText().trim());
-					v3 = Double.parseDouble(v.getText().trim());	
+				}else if(volumeTextField1.getText().trim().length() > 0){
+					volumedouble1 = Double.parseDouble(volumeTextField1.getText().trim());
+					volumedouble1 = Double.parseDouble(volumeTextField1.getText().trim());
 				}
 			}else if(i == 1){
-				if(p.getText().trim().length() == 0){
+				if(pressureTextField1.getText().trim().length() == 0){
 					
-				}else if(p.getText().trim().length() > 0){
-					p3 = Double.parseDouble(v.getText().trim());
+				}else if(pressureTextField1.getText().trim().length() > 0){
+					pressuredouble1 = Double.parseDouble(volumeTextField1.getText().trim());
 				}
 			}else if(i == 2){
-				if(n.getText().trim().length() == 0){
+				if(molesTextField1.getText().trim().length() == 0){
 					
-				}else if(n.getText().trim().length() > 0){
-					n3 = Double.parseDouble(v.getText().trim());
+				}else if(molesTextField1.getText().trim().length() > 0){
+					molesdouble1 = Double.parseDouble(volumeTextField1.getText().trim());
 				}
 			}else if(i == 3){
-				if(t.getText().trim().length() == 0){
+				if(tempTextField1.getText().trim().length() == 0){
 					
-				}else if(t.getText().trim().length() > 0){
-					t3 = Double.parseDouble(v.getText().trim());
+				}else if(tempTextField1.getText().trim().length() > 0){
+					tempdouble1 = Double.parseDouble(volumeTextField1.getText().trim());
 				}
 			}else if(i == 4){
-				if(v2.getText().trim().length() == 0){
+				if(volumeTextField2.getText().trim().length() == 0){
 					
-				}else if(v2.getText().trim().length() > 0){
-					v4 = Double.parseDouble(v2.getText().trim());
+				}else if(volumeTextField2.getText().trim().length() > 0){
+					volumedouble2 = Double.parseDouble(volumeTextField2.getText().trim());
 				}
 			}else if(i == 5){
-				if(p2.getText().trim().length() == 0){
+				if(pressureTextField2.getText().trim().length() == 0){
 					
-				}else if(p2.getText().trim().length() > 0){
-					p4 = Double.parseDouble(p2.getText().trim());
+				}else if(pressureTextField2.getText().trim().length() > 0){
+					pressuredouble2 = Double.parseDouble(pressureTextField2.getText().trim());
 				}
 			}else if(i == 6){
-				if(n2.getText().trim().length() == 0){
+				if(molesTextField2.getText().trim().length() == 0){
 					
-				}else if(n2.getText().trim().length() > 0){
-					n4 = Double.parseDouble(v.getText().trim());
+				}else if(molesTextField2.getText().trim().length() > 0){
+					molesdouble2 = Double.parseDouble(volumeTextField1.getText().trim());
 				}
 			}else if(i == 7){
-				if(t2.getText().trim().length() == 0){
+				if(tempTextField2.getText().trim().length() == 0){
 					
-				}else if(t2.getText().trim().length() > 0){
-					t4 = Double.parseDouble(v.getText().trim());
+				}else if(tempTextField2.getText().trim().length() > 0){
+					tempdouble2 = Double.parseDouble(volumeTextField1.getText().trim());
 				}
 			}else {
 				
@@ -581,16 +654,10 @@ public class GasLaws {
 	//Solves for volume
 	public static void pv(){
 		
-		checker();	
+		checker();
 
-
-		step = p3*v4;
-		answer = step/v3;
-		
-		System.out.println(answer);
-
-		step = p4*v4;
-		answer = step/p3;
+		step = pressuredouble2 * volumedouble2;
+		answer = step/ pressuredouble1;
 		
 		System.out.println(answer);
 
@@ -601,8 +668,8 @@ public class GasLaws {
 
 		checker();
 		
-		step = p4*v4;
-		answer = step/v3;
+		step = pressuredouble2 * volumedouble2;
+		answer = step/ volumedouble1;
 		
 		System.out.println(answer);
 	}
@@ -612,8 +679,8 @@ public class GasLaws {
 		
 		checker();
 		
-		step = v4*t3;
-		answer = step/t4;
+		step = volumedouble2 * tempdouble1;
+		answer = step/ tempdouble2;
 		
 		System.out.println(answer);
 	}
@@ -623,8 +690,8 @@ public class GasLaws {
 
 		checker();
 		
-		step = t4*v3;
-		answer = step/v4;
+		step = tempdouble2 * volumedouble1;
+		answer = step/ volumedouble2;
 
 	}
 
@@ -633,8 +700,8 @@ public class GasLaws {
 
 		checker();
 		
-		step = p4*t3;
-		answer = step/t4;
+		step = pressuredouble2 * tempdouble1;
+		answer = step/ tempdouble2;
 
 	}
 	
@@ -643,8 +710,8 @@ public class GasLaws {
 		
 		checker();
 		
-		step = t4*p3;
-		answer = step/p4;
+		step = tempdouble2 * pressuredouble1;
+		answer = step/ pressuredouble2;
 
 	}
 	
@@ -653,8 +720,8 @@ public class GasLaws {
 
 		checker();
 		
-		step = p4*v4*t3;
-		answer = step/(t4*v3);
+		step = pressuredouble2 * volumedouble2 * tempdouble1;
+		answer = step/(tempdouble2 * volumedouble1);
 	}
 	
 	//Solves for volume
@@ -662,8 +729,8 @@ public class GasLaws {
 		
 		checker();
 		
-		step = p4*v4*t3;
-		answer = step/(t4*p3);
+		step = pressuredouble2 * volumedouble2 * tempdouble1;
+		answer = step/(tempdouble2 * pressuredouble1);
 	}
 	
 	//Solves for temperature
@@ -671,8 +738,8 @@ public class GasLaws {
 
 		checker();
 		
-		step = t4*p3*v3;
-		answer = step/(p4*v4);
+		step = tempdouble2 * pressuredouble1 * volumedouble1;
+		answer = step/(pressuredouble2 * volumedouble2);
 	}
 
 	//Solves for volume
@@ -680,8 +747,8 @@ public class GasLaws {
 
 		checker();
 		
-		step = v4*n3;
-		answer = step/n4;
+		step = volumedouble2 * molesdouble1;
+		answer = step/ molesdouble2;
 
 	}
 	
@@ -690,8 +757,8 @@ public class GasLaws {
 
 		checker();
 		
-		step = n4*v3;
-		answer = step/v4;
+		step = molesdouble2 * volumedouble1;
+		answer = step/ volumedouble2;
 	}
 	
 	//Solves for pressure
@@ -699,8 +766,8 @@ public class GasLaws {
 
 		checker();
 		
-		step = n3*0.082*t3;
-		answer = step/v3;
+		step = molesdouble1 *0.082* tempdouble1;
+		answer = step/ volumedouble1;
 	}
 	
 	//Solves for volume
@@ -708,8 +775,8 @@ public class GasLaws {
 
 		checker();
 		
-		step = n3*0.082*t3;
-		answer = step/p3;
+		step = molesdouble1 *0.082* tempdouble1;
+		answer = step/ pressuredouble1;
 	}
 	
 	//Solves for moles
@@ -717,8 +784,8 @@ public class GasLaws {
 
 		checker();
 		
-		step = p3*v3;
-		answer = step/(0.082*t3);
+		step = pressuredouble1 * volumedouble1;
+		answer = step/(0.082* tempdouble1);
 	}
 	
 	//Solves for temperature
@@ -726,8 +793,44 @@ public class GasLaws {
 
 		checker();
 		
-		step = p3*v3;
-		answer = step/(0.082*n3);
+		step = pressuredouble1 * volumedouble1;
+		answer = step/(0.082* molesdouble1);
+	}
+
+	//Solves for pressure
+	public static void pn() {
+
+		checker();
+
+		step = pressuredouble2 * molesdouble1;
+		answer = step/ molesdouble2;
+	}
+
+	//Solves for moles
+	public static void pn2() {
+
+		checker();
+
+		step = pressuredouble1 * molesdouble2;
+		answer = step/ pressuredouble2;
+	}
+
+	//Solves for moles
+	public static void nt(){
+
+		checker();
+
+		step = molesdouble2 * tempdouble2;
+		answer = step/ tempdouble1;
+	}
+
+	//Solves for temperature
+	public static void nt2(){
+
+		checker();
+
+		step = molesdouble2 * tempdouble2;
+		answer = step/ molesdouble1;
 	}
 
 }
