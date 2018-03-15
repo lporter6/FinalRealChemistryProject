@@ -14,7 +14,6 @@ public class Buttons {
     public static JButton tempButton = new JButton("Temp");
 
     public static GasLaws G = new GasLaws();
-
     public void Button(){
         //Makes the Volume Button and sets position
         G.bag.gridx = 0;

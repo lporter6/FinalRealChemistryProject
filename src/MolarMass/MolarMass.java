@@ -10,25 +10,25 @@ public class MolarMass {
 	public static JPanel molarMassPanel = new JPanel(); // variable for molar mass panel
 	public static String[] subscripts = {"0","1","2","3","4","5","6","7","8",
 			"9","10","11","12","13","14","15",
-			"16","17","18","19","20"}; // possible values for subscribts to be used for the combo box
+			"16","17","18","19","20"}; // possible values for subscripts to be used for the combo box
 	
 	//These JTextFields and JComboBoxes belong to the molarMassPanel for inputs from users
 	public static JTextField e1 = new JTextField(5); 
-	public static JComboBox<?> cb1 = new JComboBox<Object>(subscripts);
+	public static JComboBox cb1 = new JComboBox(subscripts);
 	public static JTextField e2 = new JTextField(5);
-	public static JComboBox<?> cb2 = new JComboBox<Object>(subscripts);
+	public static JComboBox cb2 = new JComboBox(subscripts);
 	public static JTextField e3 = new JTextField(5);
-	public static JComboBox<?> cb3 = new JComboBox<Object>(subscripts);
+	public static JComboBox cb3 = new JComboBox(subscripts);
 	public static JTextField e4 = new JTextField(5);
-	public static JComboBox<?> cb4 = new JComboBox<Object>(subscripts);
+	public static JComboBox cb4 = new JComboBox(subscripts);
 	public static JTextField e5 = new JTextField(5);
-	public static JComboBox<?> cb5 = new JComboBox<Object>(subscripts);
+	public static JComboBox cb5 = new JComboBox(subscripts);
 	public static JTextField e6 = new JTextField(5);
-	public static JComboBox<?> cb6 = new JComboBox<Object>(subscripts);
+	public static JComboBox cb6 = new JComboBox(subscripts);
 	public static JTextField e7 = new JTextField(5);
-	public static JComboBox<?> cb7 = new JComboBox<Object>(subscripts);
+	public static JComboBox cb7 = new JComboBox(subscripts);
 	public static JTextField e8 = new JTextField(5);
-	public static JComboBox<?> cb8 = new JComboBox<Object>(subscripts);
+	public static JComboBox cb8 = new JComboBox (subscripts);
 	public static JLabel answerMolarMass = new JLabel("Answer goes here");	
 	public static JButton enterButtonMolarMass = new JButton("Enter");
 	
