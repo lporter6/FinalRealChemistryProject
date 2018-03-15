@@ -8,13 +8,35 @@ public class Buttons {
 
     //Makes the buttons for the different options
     public static JButton enterButtonGasLaws = new JButton("Enter");
+
     public static JButton volumeButton = new JButton("Volume");
+        public static JButton volumePV_Button = new JButton("Volume PV");
+        public static JButton volumeVT_Button = new JButton("Volume VT");
+        public static JButton volumeVN_Button = new JButton("Volume VN");
+        public static JButton volumePVT_Button = new JButton("Volume PVT");
+        public static JButton volumePVnRT_Button = new JButton("Volume PVnRT");
     public static JButton pressureButton = new JButton("Pressure");
+        public static JButton pressurePV_Button = new JButton("Pressure PV");
+        public static JButton pressurePVT_Button = new JButton("Pressure PVT");
+        public static JButton pressurePT_Button = new JButton("Pressure PT");
+        public static JButton pressurePN_Button = new JButton("Pressure PN");
+        public static JButton pressurePVnRT_Button = new JButton("Pressure PVnRT");
     public static JButton molesButton = new JButton("Moles");
+        public static JButton molesPN_Button = new JButton("Moles PN");
+        public static JButton molesVN_Button = new JButton("Moles VN");
+        public static JButton molesNT_Button = new JButton("Moles NT");
+        public static JButton molesPVnRT_Button = new JButton("Moles PVnRT");
     public static JButton tempButton = new JButton("Temp");
+        public static JButton tempPT_Button = new JButton("Temp PT");
+        public static JButton tempPVT_Button = new JButton("Temp PVT");
+        public static JButton tempVT_Button = new JButton("Temp VT");
+        public static JButton tempNT_Button = new JButton("Temp NT");
+        public static JButton tempPVnRT_Button = new JButton("Temp PVnRT");
+
 
     public static GasLaws G = new GasLaws();
     public void Button(){
+
         //Makes the Volume Button and sets position
         G.bag.gridx = 0;
         G.bag.gridy = 0;
@@ -43,45 +65,6 @@ public class Buttons {
         tempButton.addActionListener(Start.al1);
         G.gasLawsPanel.add(tempButton, G.bag);
 
-        G.bag.gridx = 4;
-        G.bag.gridy = 0;
-        G.gasLawsPanel.add(Start.homeButton, G.bag);
-
-
-        //Adds enter button to volumePV_Panel
-        G.bag.gridx = 0;
-        G.bag.gridy = 1;
-        enterButtonGasLaws.setActionCommand("Gas Enter");
-        enterButtonGasLaws.addActionListener(Start.al1);
-        G.volumePV_Panel.add(enterButtonGasLaws, G.bag);
-
-        //Adds enter button to volumeVN_Panel
-        G.bag.gridx = 0;
-        G.bag.gridy = 1;
-        enterButtonGasLaws.setActionCommand("Gas Enter");
-        enterButtonGasLaws.addActionListener(Start.al1);
-        G.volumeVN_Panel.add(enterButtonGasLaws, G.bag);
-
-        //Adds enter button to volumePVT_Panel
-        G.bag.gridx = 0;
-        G.bag.gridy = 1;
-        enterButtonGasLaws.setActionCommand("Gas Enter");
-        enterButtonGasLaws.addActionListener(Start.al1);
-        G.volumePVT_Panel.add(enterButtonGasLaws, G.bag);
-
-        //Adds enter button to volumeVT_Panel
-        G.bag.gridx = 0;
-        G.bag.gridy = 1;
-        enterButtonGasLaws.setActionCommand("Gas Enter");
-        enterButtonGasLaws.addActionListener(Start.al1);
-        G.volumeVT_Panel.add(enterButtonGasLaws, G.bag);
-
-        //Adds enter button to volumePVnRT_Panel
-        G.bag.gridx = 0;
-        G.bag.gridy = 1;
-        enterButtonGasLaws.setActionCommand("Gas Enter");
-        enterButtonGasLaws.addActionListener(Start.al1);
-        G.volumePVnRT_Panel.add(enterButtonGasLaws, G.bag);
 
         //Adds enter button to pressurePV_Panel
         G.bag.gridx = 0;
@@ -173,6 +156,43 @@ public class Buttons {
         enterButtonGasLaws.setActionCommand("Gas Enter");
         enterButtonGasLaws.addActionListener(Start.al1);
         G.tempPVnRT_Panel.add(enterButtonGasLaws, G.bag);
+
+        //Volume panel buttons
+
+            //Adds PV equation button to Volume Panel
+            G.bag.gridx = 1;
+            G.bag.gridy = 0;
+            volumePV_Button.setActionCommand("Volume PV");
+            volumePV_Button.addActionListener(Start.al1);
+            G.volumePanel.add(volumePV_Button, G.bag);
+
+            G.bag.gridx = 2;
+            G.bag.gridy = 0;
+            volumePVT_Button.setActionCommand("Volume PVT");
+            volumePVT_Button.addActionListener(Start.al1);
+            G.volumePanel.add(volumePVT_Button, G.bag);
+
+            G.bag.gridx = 3;
+            G.bag.gridy = 0;
+            volumePVnRT_Button.setActionCommand("Volume PV");
+            volumePVnRT_Button.addActionListener(Start.al1);
+            G.volumePanel.add(volumePVnRT_Button, G.bag);
+
+            G.bag.gridx = 4;
+            G.bag.gridy = 0;
+            volumeVT_Button.setActionCommand("Volume PV");
+            volumeVT_Button.addActionListener(Start.al1);
+            G.volumePanel.add(volumeVT_Button, G.bag);
+
+            G.bag.gridx = 5;
+            G.bag.gridy = 0;
+            volumeVN_Button.setActionCommand("Volume PV");
+            volumeVN_Button.addActionListener(Start.al1);
+            G.volumePanel.add(volumeVN_Button, G.bag);
+
+        //Pressure panel buttons
+        //Mole panel buttons
+        //Temperature panel buttons
 
 
     }

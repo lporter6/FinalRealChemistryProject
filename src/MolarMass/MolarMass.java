@@ -40,7 +40,7 @@ public class MolarMass {
 		
 		molarMassPanel.setLayout(new GridBagLayout()); //adding the grid bag layout to the molarMassPanel
 		GridBagConstraints c = Start.c;
-		
+
 		c.gridx = 0; 
 		c.gridy = 0;
 		c.gridwidth = 2;
@@ -120,10 +120,6 @@ public class MolarMass {
 		MolarMass.enterButtonMolarMass.setActionCommand("Molar Enter"); //setting the action command to "Molar Enter"
 		MolarMass.enterButtonMolarMass.addActionListener(Start.al1); //adding the one object as an action listener
 		molarMassPanel.add(MolarMass.enterButtonMolarMass, c); //addint the button to the panel
-		
-		c.gridx = 2;
-		c.gridy = 9;
-		molarMassPanel.add(Start.homeButton, c);
 		
 	}
 	
