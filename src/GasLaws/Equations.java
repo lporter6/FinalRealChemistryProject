@@ -1,9 +1,5 @@
 package GasLaws;
 
-import java.awt.*;
-import javax.swing.*;
-
-import Main.Start;
 
 public class Equations {
 

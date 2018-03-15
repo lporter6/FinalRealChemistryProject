@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import MolarMass.MolarMass;
 import GasLaws.GasLaws;
+import GasLaws.Equations;
 
 public class MainFrameActionListener implements ActionListener{
 	
@@ -78,6 +79,7 @@ public class MainFrameActionListener implements ActionListener{
 			Start.frame.remove(Start.frame.getContentPane()); //removes the current content pane from the frame
 			Start.frame.setContentPane(GasLaws.tempPanel); //sets the content pane to the molar mass panel
 			Start.frame.getContentPane().setVisible(true); //gets the current content pane and sets its visibility to true to ensure visibility
+
 		}else if("Game".equals(e.getActionCommand())){
 			
 			Game.Build.frame.setVisible(true);

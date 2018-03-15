@@ -75,13 +75,6 @@ public class GasLaws {
 	//Creates the main JLabel
 	public static JLabel answerGasLaws = new JLabel("Your answer will be printed in this location");
 
-	//Makes the buttons for the different options
-	public static JButton enterButtonGasLaws = new JButton("Enter");
-	public static JButton volumeButton = new JButton("Volume");
-	public static JButton pressureButton = new JButton("Pressure");
-	public static JButton molesButton = new JButton("Moles");
-	public static JButton tempButton = new JButton("Temp");
-
 	//Used to get process the steps of the equation and the get the answer
 	public static double answer;
 	public static double step;
@@ -99,8 +92,12 @@ public class GasLaws {
 	//Makes the GridBagConstraints to place all of the text fields and JLabels and such
 	public static GridBagConstraints bag = Start.c;
 
+	public static Buttons b = new Buttons();
+
 	//Main method that will run every method and will be run in the main Sart.java file
 	public static void init() {
+
+		b.Button();
 
 		//Gas Laws Panel
 
@@ -134,46 +131,7 @@ public class GasLaws {
 			tempPVnRT_Panel.setLayout(new GridBagLayout());
 			tempVT_Panel.setLayout(new GridBagLayout());
 
-		//Makes the Volume Button and sets position
-		bag.gridx = 0;
-		bag.gridy = 0;
-		GasLaws.volumeButton.setActionCommand("Volume Enter");
-		GasLaws.volumeButton.addActionListener(Start.al1);
-		gasLawsPanel.add(GasLaws.volumeButton, bag);
-
-		//Makes the Pressure Button and sets position
-		bag.gridx = 1;
-		bag.gridy = 0;
-		GasLaws.pressureButton.setActionCommand("Pressure Enter");
-		GasLaws.pressureButton.addActionListener(Start.al1);
-		gasLawsPanel.add(GasLaws.pressureButton, bag);
-
-		//Makes the Moles Button and sets position
-		bag.gridx = 2;
-		bag.gridy = 0;
-		GasLaws.molesButton.setActionCommand("Moles Enter");
-		GasLaws.molesButton.addActionListener(Start.al1);
-		gasLawsPanel.add(GasLaws.molesButton, bag);
-
-		//Makes the Temperature Button and sets position
-		bag.gridx = 3;
-		bag.gridy = 0;
-		GasLaws.tempButton.setActionCommand("Temp Enter");
-		GasLaws.tempButton.addActionListener(Start.al1);
-		gasLawsPanel.add(GasLaws.tempButton, bag);
-
-		bag.gridx = 4;
-		bag.gridy = 0;
-		gasLawsPanel.add(Start.homeButton, bag);
-
-		//Volume Panels
-
-		//Adds enter button to volumePV_Panel
-		bag.gridx = 0;
-		bag.gridy = 1;
-		GasLaws.enterButtonGasLaws.setActionCommand("Gas Enter");
-		GasLaws.enterButtonGasLaws.addActionListener(Start.al1);
-		volumePV_Panel.add(GasLaws.enterButtonGasLaws, bag);
+		//Volume panels being setup
 
 			//PV equation being set up
 			bag.gridx = 0;
@@ -192,13 +150,6 @@ public class GasLaws {
 			bag.gridy = 0;
 			volumePV_Panel.add(volumeTextField2, bag);
 
-		//Adds enter button to volumeVN_Panel
-		bag.gridx = 0;
-		bag.gridy = 1;
-		GasLaws.enterButtonGasLaws.setActionCommand("Gas Enter");
-		GasLaws.enterButtonGasLaws.addActionListener(Start.al1);
-		volumeVN_Panel.add(GasLaws.enterButtonGasLaws, bag);
-
 			//VN equation being setup
 			bag.gridx = 0;
 			bag.gridy = 0;
@@ -215,13 +166,6 @@ public class GasLaws {
 			bag.gridx = 3;
 			bag.gridy = 0;
 			volumeVN_Panel.add(molesTextField2, bag);
-
-		//Adds enter button to volumePVT_Panel
-		bag.gridx = 0;
-		bag.gridy = 1;
-		GasLaws.enterButtonGasLaws.setActionCommand("Gas Enter");
-		GasLaws.enterButtonGasLaws.addActionListener(Start.al1);
-		volumePVT_Panel.add(GasLaws.enterButtonGasLaws, bag);
 
 			//PVT equation being setup
 			bag.gridx = 0;
@@ -248,13 +192,6 @@ public class GasLaws {
 			bag.gridy = 0;
 			volumePVT_Panel.add(tempTextField2, bag);
 
-		//Adds enter button to volumeVT_Panel
-		bag.gridx = 0;
-		bag.gridy = 1;
-		GasLaws.enterButtonGasLaws.setActionCommand("Gas Enter");
-		GasLaws.enterButtonGasLaws.addActionListener(Start.al1);
-		volumeVT_Panel.add(GasLaws.enterButtonGasLaws, bag);
-
 			//VT equation being set up
 			bag.gridx = 0;
 			bag.gridy = 0;
@@ -271,13 +208,6 @@ public class GasLaws {
 			bag.gridx = 3;
 			bag.gridy = 0;
 			volumeVT_Panel.add(tempTextField2, bag);
-
-		//Adds enter button to volumePVnRT_Panel
-		bag.gridx = 0;
-		bag.gridy = 1;
-		GasLaws.enterButtonGasLaws.setActionCommand("Gas Enter");
-		GasLaws.enterButtonGasLaws.addActionListener(Start.al1);
-		volumePVnRT_Panel.add(GasLaws.enterButtonGasLaws, bag);
 
 			//PVnRT equation being setup
 			bag.gridx = 0;
@@ -302,13 +232,6 @@ public class GasLaws {
 
 		//Pressure Panels
 
-		//Adds enter button to pressurePV_Panel
-		bag.gridx = 0;
-		bag.gridy = 1;
-		GasLaws.enterButtonGasLaws.setActionCommand("Gas Enter");
-		GasLaws.enterButtonGasLaws.addActionListener(Start.al1);
-		pressurePV_Panel.add(GasLaws.enterButtonGasLaws, bag);
-
 			//PV equation being setup
 			bag.gridx = 0;
 			bag.gridy = 0;
@@ -326,13 +249,6 @@ public class GasLaws {
 			bag.gridy = 0;
 			pressurePV_Panel.add(volumeTextField2, bag);
 
-		//Adds enter button to pressurePT_Panel
-		bag.gridx = 0;
-		bag.gridy = 1;
-		GasLaws.enterButtonGasLaws.setActionCommand("Gas Enter");
-		GasLaws.enterButtonGasLaws.addActionListener(Start.al1);
-		pressurePT_Panel.add(GasLaws.enterButtonGasLaws, bag);
-
 			//PT equation being set up
 			bag.gridx = 0;
 			bag.gridy = 0;
@@ -349,13 +265,6 @@ public class GasLaws {
 			bag.gridx = 3;
 			bag.gridy = 0;
 			pressurePT_Panel.add(tempTextField2, bag);
-
-		//Adds enter button to pressurePVT_Panel
-		bag.gridx = 0;
-		bag.gridy = 1;
-		GasLaws.enterButtonGasLaws.setActionCommand("Gas Enter");
-		GasLaws.enterButtonGasLaws.addActionListener(Start.al1);
-		pressurePVT_Panel.add(GasLaws.enterButtonGasLaws, bag);
 
 			//PVT equation being set up
 			bag.gridx = 0;
@@ -382,13 +291,6 @@ public class GasLaws {
 			bag.gridy = 0;
 			pressurePVT_Panel.add(tempTextField2, bag);
 
-		//Adds enter button to pressurePVnRT_Panel
-		bag.gridx = 0;
-		bag.gridy = 1;
-		GasLaws.enterButtonGasLaws.setActionCommand("Gas Enter");
-		GasLaws.enterButtonGasLaws.addActionListener(Start.al1);
-		pressurePVnRT_Panel.add(GasLaws.enterButtonGasLaws, bag);
-
 			//PVnRT equation being setup
 			bag.gridx = 1;
 			bag.gridy = 0;
@@ -408,13 +310,6 @@ public class GasLaws {
 
 		//Mole Panels
 
-		//Adds enter button to molesVN_Panel
-		bag.gridx = 0;
-		bag.gridy = 1;
-		GasLaws.enterButtonGasLaws.setActionCommand("Gas Enter");
-		GasLaws.enterButtonGasLaws.addActionListener(Start.al1);
-		molesVN_Panel.add(GasLaws.enterButtonGasLaws, bag);
-
 			//VN equation being setup
 			bag.gridx = 0;
 			bag.gridy = 0;
@@ -432,24 +327,9 @@ public class GasLaws {
 			bag.gridy = 0;
 			molesVN_Panel.add(molesTextField2, bag);
 
-		bag.gridx = 0;
-		bag.gridy = 1;
-		GasLaws.enterButtonGasLaws.setActionCommand("Gas Enter");
-		GasLaws.enterButtonGasLaws.addActionListener(Start.al1);
-		molesNT_Panel.add(GasLaws.enterButtonGasLaws, bag);
+			//NT equations being set up
 
-		bag.gridx = 0;
-		bag.gridy = 1;
-		GasLaws.enterButtonGasLaws.setActionCommand("Gas Enter");
-		GasLaws.enterButtonGasLaws.addActionListener(Start.al1);
-		molesPN_Panel.add(GasLaws.enterButtonGasLaws, bag);
-
-		//Adds enter button to molesPVnRT_Panel
-		bag.gridx = 0;
-		bag.gridy = 1;
-		GasLaws.enterButtonGasLaws.setActionCommand("Gas Enter");
-		GasLaws.enterButtonGasLaws.addActionListener(Start.al1);
-		molesPVnRT_Panel.add(GasLaws.enterButtonGasLaws, bag);
+			//PN equations being set up
 
 			//PVnRT equation being setup
 			bag.gridx = 0;
@@ -470,13 +350,6 @@ public class GasLaws {
 
 		//Temperature Panels
 
-		//Adds enter button to tempPT_Panel
-		bag.gridx = 0;
-		bag.gridy = 1;
-		GasLaws.enterButtonGasLaws.setActionCommand("Gas Enter");
-		GasLaws.enterButtonGasLaws.addActionListener(Start.al1);
-		tempPT_Panel.add(GasLaws.enterButtonGasLaws, bag);
-
 			//PT equation being setup
 			bag.gridx = 0;
 			bag.gridy = 0;
@@ -494,13 +367,6 @@ public class GasLaws {
 			bag.gridy = 0;
 			tempPT_Panel.add(tempTextField1, bag);
 
-		//Adds enter button to tempVT_Panel
-		bag.gridx = 0;
-		bag.gridy = 1;
-		GasLaws.enterButtonGasLaws.setActionCommand("Gas Enter");
-		GasLaws.enterButtonGasLaws.addActionListener(Start.al1);
-		tempVT_Panel.add(GasLaws.enterButtonGasLaws, bag);
-
 			//VT equation being setup
 			bag.gridx = 0;
 			bag.gridy = 0;
@@ -517,20 +383,6 @@ public class GasLaws {
 			bag.gridx = 3;
 			bag.gridy = 0;
 			tempVT_Panel.add(tempTextField2, bag);
-
-		//Adds enter button to tempNT_Panel
-		bag.gridx = 0;
-		bag.gridy = 1;
-		GasLaws.enterButtonGasLaws.setActionCommand("Gas Enter");
-		GasLaws.enterButtonGasLaws.addActionListener(Start.al1);
-		tempNT_Panel.add(GasLaws.enterButtonGasLaws, bag);
-
-		//Adds enter button to tempPVT_Panel
-		bag.gridx = 0;
-		bag.gridy = 1;
-		GasLaws.enterButtonGasLaws.setActionCommand("Gas Enter");
-		GasLaws.enterButtonGasLaws.addActionListener(Start.al1);
-		tempPVT_Panel.add(GasLaws.enterButtonGasLaws, bag);
 
 			//PVT equation being setup
 			bag.gridx = 0;
@@ -557,13 +409,6 @@ public class GasLaws {
 			bag.gridy = 0;
 			tempPVT_Panel.add(tempTextField2, bag);
 
-		//Adds enter button to tempPVnRT_Panel
-		bag.gridx = 0;
-		bag.gridy = 1;
-		GasLaws.enterButtonGasLaws.setActionCommand("Gas Enter");
-		GasLaws.enterButtonGasLaws.addActionListener(Start.al1);
-		tempPVnRT_Panel.add(GasLaws.enterButtonGasLaws, bag);
-
 			//PVnRT being setup
 			bag.gridx = 0;
 			bag.gridy = 0;
@@ -583,4 +428,3 @@ public class GasLaws {
 	}
 
 }
-
