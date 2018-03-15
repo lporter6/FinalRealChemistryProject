@@ -49,8 +49,7 @@ public class MainFrameActionListener implements ActionListener{
 			Start.frame.getContentPane().setVisible(true); //gets the current content pane and sets its visibility to true to ensure visibility
 			
 		}else if("Gas Enter".equals(e.getActionCommand())){
-		
-			GasLaws.pv();
+			
 		
 		}else if("Volume Enter".equals(e.getActionCommand())){
 			
