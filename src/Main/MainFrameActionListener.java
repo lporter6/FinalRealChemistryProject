@@ -49,7 +49,7 @@ public class MainFrameActionListener implements ActionListener{
 			Start.frame.getContentPane().setVisible(true); //gets the current content pane and sets its visibility to true to ensure visibility
 			
 		}else if("Gas Enter".equals(e.getActionCommand())){
-			
+
 		
 		}else if("Volume Enter".equals(e.getActionCommand())){
 			
@@ -88,7 +88,7 @@ public class MainFrameActionListener implements ActionListener{
 			Start.frame.remove(Start.frame.getContentPane()); //removes the current content pane from the frame
 			Start.frame.setContentPane(Start.mainpanel); //sets the content pane to the main panel
 			Start.frame.getContentPane().setVisible(true); //gets the current content pane and sets its visibility to true to ensure visibility
-			
+
 		}
 			
 	}
