@@ -11,6 +11,7 @@ public class GameObject {
 	public int y;
 	public int width;
 	public int height;
+	public int movement = 0;
 	
 	public GameObject(Image sprite, int x, int y, int scale){
 		

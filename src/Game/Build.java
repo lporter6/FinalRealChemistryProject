@@ -3,6 +3,7 @@ package Game;
 import GameObject.*;
 import Main.Start;
 
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 
@@ -16,6 +17,7 @@ public class Build {
 	public static Graphic mainGraphic = new Graphic();
 	public static GameKeyListener kl1 = new GameKeyListener();
 	public static GameObject character;
+	public static Image background;
 	
 	public static void init(){ //creates all the objects for the game
 		
@@ -24,14 +26,17 @@ public class Build {
 		frame.setVisible(false); //sets its visibility to false until the button on Start.mainpanel is pushed
 		frame.setContentPane(mainGraphic); //sets the frame's content pane to the main graphic
 		frame.addKeyListener(kl1);
-		
+
 		try {
-			character = new GameObject(ImageIO.read(new File("images/Front.png")),0,0,3); 
+			character = new GameObject(ImageIO.read(new File("images/Front.png")),0,0,3);
+			background = ImageIO.read(new File("images/map.png"));
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		
+
+
+
 		while(true){
 			
 			try{
