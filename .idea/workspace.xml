@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="322f9290-1273-49df-ad20-651a222a5096" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/PlayingField/TileMap.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/PlayingField/TilePiece.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/images/Back.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/Front.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/Left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/Right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/map.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/ChemProject/Game/Build.class" afterPath="$PROJECT_DIR$/out/production/ChemProject/Game/Build.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/ChemProject/Game/GameKeyListener.class" afterPath="$PROJECT_DIR$/out/production/ChemProject/Game/GameKeyListener.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/ChemProject/Game/Graphic.class" afterPath="$PROJECT_DIR$/out/production/ChemProject/Game/Graphic.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/ChemProject/GameObject/GameObject.class" afterPath="$PROJECT_DIR$/out/production/ChemProject/GameObject/GameObject.class" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Build.java" afterPath="$PROJECT_DIR$/src/Game/Build.java" />
-      <change beforePath="$PROJECT_DIR$/src/Game/GameKeyListener.java" afterPath="$PROJECT_DIR$/src/Game/GameKeyListener.java" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Graphic.java" afterPath="$PROJECT_DIR$/src/Game/Graphic.java" />
-      <change beforePath="$PROJECT_DIR$/src/GameObject/GameObject.java" afterPath="$PROJECT_DIR$/src/GameObject/GameObject.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -533,12 +518,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521254203243</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added TileMap stuffs">
+      <created>1521652999555</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1521652999556</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -546,10 +537,10 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2339833" sideWeight="0.5087848" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20612814" sideWeight="0.511713" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2339833" sideWeight="0.49121523" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20612814" sideWeight="0.49121523" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2339833" sideWeight="0.49121523" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20612814" sideWeight="0.48828697" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32729805" sideWeight="0.4941435" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -602,7 +593,8 @@
     <MESSAGE value="Added controls for game" />
     <MESSAGE value="Edited game controls" />
     <MESSAGE value="added map.png to /images/" />
-    <option name="LAST_COMMIT_MESSAGE" value="added map.png to /images/" />
+    <MESSAGE value="Added TileMap stuffs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added TileMap stuffs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
