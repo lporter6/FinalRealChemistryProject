@@ -28,7 +28,6 @@ public class Equations {
 
                 } else if (G.volumeTextField1.getText().trim().length() > 0) {
                     G.volumedouble1 = Double.parseDouble(G.volumeTextField1.getText().trim());
-                    G.volumedouble1 = Double.parseDouble(G.volumeTextField1.getText().trim());
                 }
             } else if (i == 1) {
                 if (G.pressureTextField1.getText().trim().length() == 0) {
@@ -79,7 +78,7 @@ public class Equations {
     }
 
     //Solves for volume
-    public static void pv() {
+    public static void volume_pv() {
 
         checker();
 
@@ -88,10 +87,12 @@ public class Equations {
 
         System.out.println(G.answer);
 
+
+
     }
 
     //Solves for pressure
-    public static void pv2() {
+    public static void pressure_pv() {
 
         checker();
 

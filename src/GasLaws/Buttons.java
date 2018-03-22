@@ -67,7 +67,7 @@ public class Buttons {
 
 
         //Adds enter button to pressurePV_Panel
-        G.bag.gridx = 0;
+       /* G.bag.gridx = 0;
         G.bag.gridy = 1;
         enterButtonGasLaws.setActionCommand("Gas Enter");
         enterButtonGasLaws.addActionListener(Start.al1);
@@ -155,7 +155,7 @@ public class Buttons {
         G.bag.gridy = 1;
         enterButtonGasLaws.setActionCommand("Gas Enter");
         enterButtonGasLaws.addActionListener(Start.al1);
-        G.tempPVnRT_Panel.add(enterButtonGasLaws, G.bag);
+        G.tempPVnRT_Panel.add(enterButtonGasLaws, G.bag); */
 
         //Volume panel buttons
 

@@ -10,11 +10,18 @@ import GasLaws.Buttons;
 
 import javax.swing.*;
 
+import static GasLaws.Equations.checker;
+import static GasLaws.Equations.volume_pv;
+
+import GasLaws.Equations;
+
 public class MainFrameActionListener implements ActionListener{
 
 	public static GasLaws G = new GasLaws();
 
 	public static Buttons B = new Buttons();
+
+	public static Equations E = new Equations();
 
 	public void actionPerformed(ActionEvent e){
 			
@@ -66,9 +73,6 @@ public class MainFrameActionListener implements ActionListener{
 			Start.homeButton.setActionCommand("Home");
 			Start.homeButton.addActionListener(Start.al1);
 			G.gasLawsPanel.add(Start.homeButton, G.bag);
-
-
-		}else if("Gas Enter".equals(e.getActionCommand())){
 
 		
 		}else if("Volume Enter".equals(e.getActionCommand())) {
@@ -509,6 +513,20 @@ public class MainFrameActionListener implements ActionListener{
 			Start.frame.remove(Start.frame.getContentPane()); //removes the current content pane from the frame
 			Start.frame.setContentPane(Start.mainpanel); //sets the content pane to the main panel
 			Start.frame.getContentPane().setVisible(true); //gets the current content pane and sets its visibility to true to ensure visibility
+
+		}else if("Gas Enter".equals(e.getActionCommand())){
+
+			if(G.volumePV_Panel.isDisplayable()) {
+
+				System.out.println("yes");
+				E.volume_pv();
+
+			}else if(G.volumePVT_Panel.isDisplayable()){
+
+				System.out.println("no");
+
+			}
+
 
 		}
 			
