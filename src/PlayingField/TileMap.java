@@ -16,15 +16,18 @@ public class TileMap {
 
     public TileMap(int rows, int cols) {
 
-         for(int i = 0; i<rows; i++){
+        map = new TilePiece[rows][cols];
 
-             for(int j = 0; j<cols; j++){
+        for(int i = 0; i<rows; i++){
 
-                 map[i][j] = new TilePiece(i,j); //creating one tilepiece for every position in the rows and columns
+            for(int j = 0; j<cols; j++){
 
-             }
+                map[i][j] = new TilePiece(i,j); //creating one tilepiece for every position in the rows and columns
+                System.out.println("Created a TilePiece at row " + map[i][j].row + ", column " + map[i][j].column);
 
-         }
+            }
+
+        }
 
     }
     public TilePiece getTilePieceAtCoordinate(int x,int y){
@@ -46,12 +49,13 @@ public class TileMap {
                 Image image;
                 try{
 
-                    image = ImageIO.read(new File("TileA2 [www.imagesplitter.net]-0-0.jpeg"));
-                    g2d.drawImage(image, p.getX(), p.getY(), Build.mainGraphic);
+                    image = ImageIO.read(new File("images/tiles/TileA2 [www.imagesplitter.net]-0-0.jpeg")); //placeholder for
+                    g2d.drawImage(image, p.getX(), p.getY(), 32, 32, Build.mainGraphic);
+                    System.out.println("Drew and image!");
 
                 }catch(Exception e){
 
-                    System.out.println(e.getStackTrace());
+                    System.out.println(e.getStackTrace()+ " death");
 
                 }
 

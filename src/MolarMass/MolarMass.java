@@ -31,13 +31,12 @@ public class MolarMass {
 	public static JComboBox cb8 = new JComboBox (subscripts);
 	public static JLabel answerMolarMass = new JLabel("Answer goes here");	
 	public static JButton enterButtonMolarMass = new JButton("Enter");
-	
 	public static JTextField[] textFieldsMolarMass = {e1,e2,e3,e4,e5,e6,e7,e8};  //all of the JTextFields
 	@SuppressWarnings("rawtypes")
 	public static JComboBox[] comboBoxMolarMass = {cb1,cb2,cb3,cb4,cb5,cb6,cb7,cb8}; //all of the JComboBoxes
 	
 	public static void init(){
-		
+
 		molarMassPanel.setLayout(new GridBagLayout()); //adding the grid bag layout to the molarMassPanel
 		GridBagConstraints c = Start.c;
 
@@ -117,8 +116,8 @@ public class MolarMass {
 		
 		c.gridx = 1;
 		c.gridy = 9;
-		MolarMass.enterButtonMolarMass.setActionCommand("Molar Enter"); //setting the action command to "Molar Enter"
-		MolarMass.enterButtonMolarMass.addActionListener(Start.al1); //adding the one object as an action listener
+		enterButtonMolarMass.setActionCommand("Molar Enter"); //setting the action command to "Molar Enter"
+		enterButtonMolarMass.addActionListener(Start.al1); //adding the one object as an action listener
 		molarMassPanel.add(MolarMass.enterButtonMolarMass, c); //addint the button to the panel
 		
 	}

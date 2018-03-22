@@ -133,180 +133,19 @@ public class GasLaws {
 
 		//Volume panels being setup
 
-			//PV equation being set up
-			bag.gridx = 0;
-			bag.gridy = 0;
-			volumePV_Panel.add(volumeTextField1, bag);
 
-			bag.gridx = 1;
-			bag.gridy = 0;
-			volumePV_Panel.add(new JLabel("="));
 
-			bag.gridx = 2;
-			bag.gridy = 0;
-			volumePV_Panel.add(pressureTextField2, bag);
-
-			bag.gridx = 3;
-			bag.gridy = 0;
-			volumePV_Panel.add(volumeTextField2, bag);
-
-			//VN equation being setup
-			bag.gridx = 0;
-			bag.gridy = 0;
-			volumeVN_Panel.add(molesTextField1, bag);
-
-			bag.gridx = 1;
-			bag.gridy = 0;
-			volumeVN_Panel.add(new JLabel("="));
-
-			bag.gridx = 2;
-			bag.gridy = 0;
-			volumeVN_Panel.add(volumeTextField2, bag);
-
-			bag.gridx = 3;
-			bag.gridy = 0;
-			volumeVN_Panel.add(molesTextField2, bag);
-
-			//PVT equation being setup
-			bag.gridx = 0;
-			bag.gridy = 0;
-			volumePVT_Panel.add(pressureTextField1, bag);
-
-			bag.gridx = 1;
-			bag.gridy = 0;
-			volumePVT_Panel.add(tempTextField1, bag);
-
-			bag.gridx = 1;
-			bag.gridy = 0;
-			volumePVT_Panel.add(new JLabel("="));
-
-			bag.gridx = 3;
-			bag.gridy = 0;
-			volumePVT_Panel.add(pressureTextField2, bag);
-
-			bag.gridx = 4;
-			bag.gridy = 0;
-			volumePVT_Panel.add(volumeTextField2, bag);
-
-			bag.gridx = 5;
-			bag.gridy = 0;
-			volumePVT_Panel.add(tempTextField2, bag);
-
-			//VT equation being set up
-			bag.gridx = 0;
-			bag.gridy = 0;
-			volumeVT_Panel.add(tempTextField1, bag);
-
-			bag.gridx = 1;
-			bag.gridy = 0;
-			volumeVT_Panel.add(new JLabel("="));
-
-			bag.gridx = 2;
-			bag.gridy = 0;
-			volumeVT_Panel.add(volumeTextField2, bag);
-
-			bag.gridx = 3;
-			bag.gridy = 0;
-			volumeVT_Panel.add(tempTextField2, bag);
-
-			//PVnRT equation being setup
-			bag.gridx = 0;
-			bag.gridy = 0;
-			volumePVnRT_Panel.add(pressureTextField1, bag);
-
-			bag.gridx = 1;
-			bag.gridy = 0;
-			volumePVnRT_Panel.add(volumeTextField1, bag);
-
-			bag.gridx = 1;
-			bag.gridy = 0;
-			volumePVnRT_Panel.add(new JLabel("="));
-
-			bag.gridx = 2;
-			bag.gridy = 0;
-			volumePVnRT_Panel.add(molesTextField1, bag);
-
-			bag.gridx = 3;
-			bag.gridy = 0;
-			volumePVnRT_Panel.add(tempTextField1, bag);
 
 		//Pressure Panels
 
 			//PV equation being setup
-			bag.gridx = 0;
-			bag.gridy = 0;
-			pressurePV_Panel.add(volumeTextField1, bag);
 
-			bag.gridx = 1;
-			bag.gridy = 0;
-			pressurePV_Panel.add(new JLabel("="));
 
-			bag.gridx = 2;
-			bag.gridy = 0;
-			pressurePV_Panel.add(pressureTextField2, bag);
 
-			bag.gridx = 3;
-			bag.gridy = 0;
-			pressurePV_Panel.add(volumeTextField2, bag);
 
-			//PT equation being set up
-			bag.gridx = 0;
-			bag.gridy = 0;
-			pressurePT_Panel.add(tempTextField1, bag);
 
-			bag.gridx = 1;
-			bag.gridy = 0;
-			pressurePT_Panel.add(new JLabel("="));
 
-			bag.gridx = 2;
-			bag.gridy = 0;
-			pressurePT_Panel.add(pressureTextField2, bag);
 
-			bag.gridx = 3;
-			bag.gridy = 0;
-			pressurePT_Panel.add(tempTextField2, bag);
-
-			//PVT equation being set up
-			bag.gridx = 0;
-			bag.gridy = 0;
-			pressurePVT_Panel.add(volumeTextField1, bag);
-
-			bag.gridx = 1;
-			bag.gridy = 0;
-			pressurePVT_Panel.add(tempTextField1, bag);
-
-			bag.gridx = 1;
-			bag.gridy = 0;
-			pressurePVT_Panel.add(new JLabel("="));
-
-			bag.gridx = 3;
-			bag.gridy = 0;
-			pressurePVT_Panel.add(pressureTextField2, bag);
-
-			bag.gridx = 4;
-			bag.gridy = 0;
-			pressurePVT_Panel.add(volumeTextField2, bag);
-
-			bag.gridx = 5;
-			bag.gridy = 0;
-			pressurePVT_Panel.add(tempTextField2, bag);
-
-			//PVnRT equation being setup
-			bag.gridx = 1;
-			bag.gridy = 0;
-			pressurePVnRT_Panel.add(volumeTextField1, bag);
-
-			bag.gridx = 1;
-			bag.gridy = 0;
-			pressurePVnRT_Panel.add(new JLabel("="));
-
-			bag.gridx = 2;
-			bag.gridy = 0;
-			pressurePVnRT_Panel.add(molesTextField1, bag);
-
-			bag.gridx = 3;
-			bag.gridy = 0;
-			pressurePVnRT_Panel.add(tempTextField1, bag);
 
 		//Mole Panels
 

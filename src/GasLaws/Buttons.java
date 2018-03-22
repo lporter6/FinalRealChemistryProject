@@ -191,9 +191,97 @@ public class Buttons {
             G.volumePanel.add(volumeVN_Button, G.bag);
 
         //Pressure panel buttons
+
+            //Adds PV equation button to Volume Panel
+            G.bag.gridx = 1;
+            G.bag.gridy = 0;
+            pressurePV_Button.setActionCommand("Volume PV");
+            pressurePV_Button.addActionListener(Start.al1);
+            G.pressurePanel.add(pressurePV_Button, G.bag);
+
+            G.bag.gridx = 2;
+            G.bag.gridy = 0;
+            pressurePVT_Button.setActionCommand("Volume PVT");
+            pressurePVT_Button.addActionListener(Start.al1);
+            G.pressurePanel.add(pressurePVT_Button, G.bag);
+
+            G.bag.gridx = 3;
+            G.bag.gridy = 0;
+            pressurePVnRT_Button.setActionCommand("Volume PV");
+            pressurePVnRT_Button.addActionListener(Start.al1);
+            G.pressurePanel.add(pressurePVnRT_Button, G.bag);
+
+            G.bag.gridx = 4;
+            G.bag.gridy = 0;
+            pressurePT_Button.setActionCommand("Volume PV");
+            pressurePT_Button.addActionListener(Start.al1);
+            G.pressurePanel.add(pressurePT_Button, G.bag);
+
+            G.bag.gridx = 5;
+            G.bag.gridy = 0;
+            pressurePN_Button.setActionCommand("Volume PV");
+            pressurePN_Button.addActionListener(Start.al1);
+            G.pressurePanel.add(pressurePN_Button, G.bag);
+
         //Mole panel buttons
+
+            //Adds PV equation button to Volume Panel
+            G.bag.gridx = 1;
+            G.bag.gridy = 0;
+            molesVN_Button.setActionCommand("Volume PV");
+            molesVN_Button.addActionListener(Start.al1);
+            G.molesPanel.add(molesVN_Button, G.bag);
+
+            G.bag.gridx = 2;
+            G.bag.gridy = 0;
+            molesNT_Button.setActionCommand("Volume PVT");
+            molesNT_Button.addActionListener(Start.al1);
+            G.molesPanel.add(molesNT_Button, G.bag);
+
+            G.bag.gridx = 3;
+            G.bag.gridy = 0;
+            molesPVnRT_Button.setActionCommand("Volume PV");
+            molesPVnRT_Button.addActionListener(Start.al1);
+            G.molesPanel.add(molesPVnRT_Button, G.bag);
+
+            G.bag.gridx = 4;
+            G.bag.gridy = 0;
+            molesPN_Button.setActionCommand("Volume PV");
+            molesPN_Button.addActionListener(Start.al1);
+            G.molesPanel.add(molesPN_Button, G.bag);
+
         //Temperature panel buttons
 
+            //Adds PV equation button to Volume Panel
+            G.bag.gridx = 1;
+            G.bag.gridy = 0;
+            tempNT_Button.setActionCommand("Volume PV");
+            tempNT_Button.addActionListener(Start.al1);
+            G.tempPanel.add(tempNT_Button, G.bag);
+
+            G.bag.gridx = 2;
+            G.bag.gridy = 0;
+            tempPVT_Button.setActionCommand("Volume PVT");
+            tempPVT_Button.addActionListener(Start.al1);
+            G.tempPanel.add(tempPVT_Button, G.bag);
+
+            G.bag.gridx = 3;
+            G.bag.gridy = 0;
+            tempPVnRT_Button.setActionCommand("Volume PV");
+            tempPVnRT_Button.addActionListener(Start.al1);
+            G.tempPanel.add(tempPVnRT_Button, G.bag);
+
+            G.bag.gridx = 4;
+            G.bag.gridy = 0;
+            tempPT_Button.setActionCommand("Volume PV");
+            tempPT_Button.addActionListener(Start.al1);
+            G.tempPanel.add(tempPT_Button, G.bag);
+
+            G.bag.gridx = 5;
+            G.bag.gridy = 0;
+            tempVT_Button.setActionCommand("Volume PV");
+            tempVT_Button.addActionListener(Start.al1);
+            G.tempPanel.add(tempVT_Button, G.bag);
 
     }
 

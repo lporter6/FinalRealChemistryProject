@@ -8,6 +8,8 @@ import MolarMass.MolarMass;
 import GasLaws.GasLaws;
 import GasLaws.Buttons;
 
+import javax.swing.*;
+
 public class MainFrameActionListener implements ActionListener{
 
 	public static GasLaws G = new GasLaws();
@@ -90,6 +92,23 @@ public class MainFrameActionListener implements ActionListener{
 			Start.frame.setContentPane(GasLaws.volumePV_Panel); //sets the content pane to the molar mass panel
 			Start.frame.getContentPane().setVisible(true); //gets the current content pane and sets its visibility to true to ensure visibility
 
+			//PV equation being set up
+			G.bag.gridx = 0;
+			G.bag.gridy = 0;
+			G.volumePV_Panel.add(G.volumeTextField1, G.bag);
+
+			G.bag.gridx = 1;
+			G.bag.gridy = 0;
+			G.volumePV_Panel.add(new JLabel("="));
+
+			G.bag.gridx = 2;
+			G.bag.gridy = 0;
+			G.volumePV_Panel.add(G.pressureTextField2, G.bag);
+
+			G.bag.gridx = 3;
+			G.bag.gridy = 0;
+			G.volumePV_Panel.add(G.volumeTextField2, G.bag);
+
 			//Adds enter button to volumePV_Panel
 			GasLaws.bag.gridx = 0;
 			GasLaws.bag.gridy = 1;
@@ -102,12 +121,38 @@ public class MainFrameActionListener implements ActionListener{
 			Start.homeButton.setActionCommand("Home");
 			Start.homeButton.addActionListener(Start.al1);
 			G.volumePV_Panel.add(Start.homeButton, G.bag);
+
 		}else if("Volume PVT".equals(e.getActionCommand())) {
 
 			Start.frame.getContentPane().setVisible(false); //gets the frames current content pane and sets its visibility to false
 			Start.frame.remove(Start.frame.getContentPane()); //removes the current content pane from the frame
 			Start.frame.setContentPane(GasLaws.volumePVT_Panel); //sets the content pane to the molar mass panel
 			Start.frame.getContentPane().setVisible(true); //gets the current content pane and sets its visibility to true to ensure visibility
+
+			//PVT equation being setup
+			G.bag.gridx = 0;
+			G.bag.gridy = 0;
+			G.volumePVT_Panel.add(G.pressureTextField1, G.bag);
+
+			G.bag.gridx = 1;
+			G.bag.gridy = 0;
+			G.volumePVT_Panel.add(G.tempTextField1, G.bag);
+
+			G.bag.gridx = 1;
+			G.bag.gridy = 0;
+			G.volumePVT_Panel.add(new JLabel("="));
+
+			G.bag.gridx = 3;
+			G.bag.gridy = 0;
+			G.volumePVT_Panel.add(G.pressureTextField2, G.bag);
+
+			G.bag.gridx = 4;
+			G.bag.gridy = 0;
+			G.volumePVT_Panel.add(G.volumeTextField2, G.bag);
+
+			G.bag.gridx = 5;
+			G.bag.gridy = 0;
+			G.volumePVT_Panel.add(G.tempTextField2, G.bag);
 
 			//Adds enter button to volumePVT_Panel
 			G.bag.gridx = 0;
@@ -121,12 +166,30 @@ public class MainFrameActionListener implements ActionListener{
 			Start.homeButton.setActionCommand("Home");
 			Start.homeButton.addActionListener(Start.al1);
 			G.volumePVT_Panel.add(Start.homeButton, G.bag);
+
 		}else if("Volume VT".equals(e.getActionCommand())) {
 
 			Start.frame.getContentPane().setVisible(false); //gets the frames current content pane and sets its visibility to false
 			Start.frame.remove(Start.frame.getContentPane()); //removes the current content pane from the frame
 			Start.frame.setContentPane(GasLaws.volumeVT_Panel); //sets the content pane to the molar mass panel
 			Start.frame.getContentPane().setVisible(true); //gets the current content pane and sets its visibility to true to ensure visibility
+
+			//VT equation being set up
+			G.bag.gridx = 0;
+			G.bag.gridy = 0;
+			G.volumeVT_Panel.add(G.tempTextField1, G.bag);
+
+			G.bag.gridx = 1;
+			G.bag.gridy = 0;
+			G.volumeVT_Panel.add(new JLabel("="));
+
+			G.bag.gridx = 2;
+			G.bag.gridy = 0;
+			G.volumeVT_Panel.add(G.volumeTextField2, G.bag);
+
+			G.bag.gridx = 3;
+			G.bag.gridy = 0;
+			G.volumeVT_Panel.add(G.tempTextField2, G.bag);
 
 			//Adds enter button to volumeVT_Panel
 			G.bag.gridx = 0;
@@ -140,12 +203,34 @@ public class MainFrameActionListener implements ActionListener{
 			Start.homeButton.setActionCommand("Home");
 			Start.homeButton.addActionListener(Start.al1);
 			G.volumeVT_Panel.add(Start.homeButton, G.bag);
+
 		}else if("Volume PVnRT".equals(e.getActionCommand())) {
 
 			Start.frame.getContentPane().setVisible(false); //gets the frames current content pane and sets its visibility to false
 			Start.frame.remove(Start.frame.getContentPane()); //removes the current content pane from the frame
 			Start.frame.setContentPane(GasLaws.volumePVnRT_Panel); //sets the content pane to the molar mass panel
 			Start.frame.getContentPane().setVisible(true); //gets the current content pane and sets its visibility to true to ensure visibility
+
+			//PVnRT equation being setup
+			G.bag.gridx = 0;
+			G.bag.gridy = 0;
+			G.volumePVnRT_Panel.add(G.pressureTextField1, G.bag);
+
+			G.bag.gridx = 1;
+			G.bag.gridy = 0;
+			G.volumePVnRT_Panel.add(G.volumeTextField1, G.bag);
+
+			G.bag.gridx = 1;
+			G.bag.gridy = 0;
+			G.volumePVnRT_Panel.add(new JLabel("="));
+
+			G.bag.gridx = 2;
+			G.bag.gridy = 0;
+			G.volumePVnRT_Panel.add(G.molesTextField1, G.bag);
+
+			G.bag.gridx = 3;
+			G.bag.gridy = 0;
+			G.volumePVnRT_Panel.add(G.tempTextField1, G.bag);
 
 			//Adds enter button to volumePVnRT_Panel
 			G.bag.gridx = 0;
@@ -159,12 +244,30 @@ public class MainFrameActionListener implements ActionListener{
 			Start.homeButton.setActionCommand("Home");
 			Start.homeButton.addActionListener(Start.al1);
 			G.volumePVnRT_Panel.add(Start.homeButton, G.bag);
+
 		}else if("Volume VN".equals(e.getActionCommand())) {
 
 			Start.frame.getContentPane().setVisible(false); //gets the frames current content pane and sets its visibility to false
 			Start.frame.remove(Start.frame.getContentPane()); //removes the current content pane from the frame
 			Start.frame.setContentPane(GasLaws.volumeVN_Panel); //sets the content pane to the molar mass panel
 			Start.frame.getContentPane().setVisible(true); //gets the current content pane and sets its visibility to true to ensure visibility
+
+			//VN equation being setup
+			G.bag.gridx = 0;
+			G.bag.gridy = 0;
+			G.volumeVN_Panel.add(G.molesTextField1, G.bag);
+
+			G.bag.gridx = 1;
+			G.bag.gridy = 0;
+			G.volumeVN_Panel.add(new JLabel("="));
+
+			G.bag.gridx = 2;
+			G.bag.gridy = 0;
+			G.volumeVN_Panel.add(G.volumeTextField2, G.bag);
+
+			G.bag.gridx = 3;
+			G.bag.gridy = 0;
+			G.volumeVN_Panel.add(G.molesTextField2, G.bag);
 
 			//Adds enter button to volumeVN_Panel
 			G.bag.gridx = 0;
@@ -187,11 +290,186 @@ public class MainFrameActionListener implements ActionListener{
 			Start.frame.getContentPane().setVisible(true); //gets the current content pane and sets its visibility to true to ensure visibility
 
 			//Pressure home buttons
-			G.bag.gridx = 4;
+			G.bag.gridx = 7;
 			G.bag.gridy = 0;
 			Start.homeButton.setActionCommand("Home");
 			Start.homeButton.addActionListener(Start.al1);
 			G.pressurePanel.add(Start.homeButton, G.bag);
+
+		}else if("Pressure PV".equals(e.getActionCommand())) {
+
+			Start.frame.getContentPane().setVisible(false); //gets the frames current content pane and sets its visibility to false
+			Start.frame.remove(Start.frame.getContentPane()); //removes the current content pane from the frame
+			Start.frame.setContentPane(GasLaws.pressurePV_Panel); //sets the content pane to the molar mass panel
+			Start.frame.getContentPane().setVisible(true); //gets the current content pane and sets its visibility to true to ensure visibility
+
+			G.bag.gridx = 0;
+			G.bag.gridy = 0;
+			G.pressurePV_Panel.add(G.volumeTextField1, G.bag);
+
+			G.bag.gridx = 1;
+			G.bag.gridy = 0;
+			G.pressurePV_Panel.add(new JLabel("="));
+
+			G.bag.gridx = 2;
+			G.bag.gridy = 0;
+			G.pressurePV_Panel.add(G.pressureTextField2, G.bag);
+
+			G.bag.gridx = 3;
+			G.bag.gridy = 0;
+			G.pressurePV_Panel.add(G.volumeTextField2, G.bag);
+
+			//Adds enter button to pressurePV_Panel
+			GasLaws.bag.gridx = 0;
+			GasLaws.bag.gridy = 1;
+			Buttons.enterButtonGasLaws.setActionCommand("Gas Enter");
+			Buttons.enterButtonGasLaws.addActionListener(Start.al1);
+			G.pressurePV_Panel.add(Buttons.enterButtonGasLaws, G.bag);
+
+			G.bag.gridx = 7;
+			G.bag.gridy = 1;
+			Start.homeButton.setActionCommand("Home");
+			Start.homeButton.addActionListener(Start.al1);
+			G.pressurePV_Panel.add(Start.homeButton, G.bag);
+
+		}else if("Pressure PVT".equals(e.getActionCommand())) {
+
+			Start.frame.getContentPane().setVisible(false); //gets the frames current content pane and sets its visibility to false
+			Start.frame.remove(Start.frame.getContentPane()); //removes the current content pane from the frame
+			Start.frame.setContentPane(GasLaws.pressurePVT_Panel); //sets the content pane to the molar mass panel
+			Start.frame.getContentPane().setVisible(true); //gets the current content pane and sets its visibility to true to ensure visibility
+
+			//PVT equation being set up
+			G.bag.gridx = 0;
+			G.bag.gridy = 0;
+			G.pressurePVT_Panel.add(G.volumeTextField1, G.bag);
+
+			G.bag.gridx = 1;
+			G.bag.gridy = 0;
+			G.pressurePVT_Panel.add(G.tempTextField1, G.bag);
+
+			G.bag.gridx = 1;
+			G.bag.gridy = 0;
+			G.pressurePVT_Panel.add(new JLabel("="));
+
+			G.bag.gridx = 3;
+			G.bag.gridy = 0;
+			G.pressurePVT_Panel.add(G.pressureTextField2, G.bag);
+
+			G.bag.gridx = 4;
+			G.bag.gridy = 0;
+			G.pressurePVT_Panel.add(G.volumeTextField2, G.bag);
+
+			G.bag.gridx = 5;
+			G.bag.gridy = 0;
+			G.pressurePVT_Panel.add(G.tempTextField2, G.bag);
+
+			//Adds enter button to volumePVT_Panel
+			G.bag.gridx = 0;
+			G.bag.gridy = 1;
+			Buttons.enterButtonGasLaws.setActionCommand("Gas Enter");
+			Buttons.enterButtonGasLaws.addActionListener(Start.al1);
+			G.pressurePVT_Panel.add(Buttons.enterButtonGasLaws, G.bag);
+
+			G.bag.gridx = 7;
+			G.bag.gridy = 1;
+			Start.homeButton.setActionCommand("Home");
+			Start.homeButton.addActionListener(Start.al1);
+			G.pressurePVT_Panel.add(Start.homeButton, G.bag);
+
+		}else if("Pressure PT".equals(e.getActionCommand())) {
+
+			Start.frame.getContentPane().setVisible(false); //gets the frames current content pane and sets its visibility to false
+			Start.frame.remove(Start.frame.getContentPane()); //removes the current content pane from the frame
+			Start.frame.setContentPane(GasLaws.pressurePT_Panel); //sets the content pane to the molar mass panel
+			Start.frame.getContentPane().setVisible(true); //gets the current content pane and sets its visibility to true to ensure visibility
+
+			//PT equation being set up
+			G.bag.gridx = 0;
+			G.bag.gridy = 0;
+			G.pressurePT_Panel.add(G.tempTextField1, G.bag);
+
+			G.bag.gridx = 1;
+			G.bag.gridy = 0;
+			G.pressurePT_Panel.add(new JLabel("="));
+
+			G.bag.gridx = 2;
+			G.bag.gridy = 0;
+			G.pressurePT_Panel.add(G.pressureTextField2, G.bag);
+
+			G.bag.gridx = 3;
+			G.bag.gridy = 0;
+			G.pressurePT_Panel.add(G.tempTextField2, G.bag);
+
+			//Adds enter button to volumeVT_Panel
+			G.bag.gridx = 0;
+			G.bag.gridy = 1;
+			Buttons.enterButtonGasLaws.setActionCommand("Gas Enter");
+			Buttons.enterButtonGasLaws.addActionListener(Start.al1);
+			G.pressurePT_Panel.add(Buttons.enterButtonGasLaws, G.bag);
+
+			G.bag.gridx = 7;
+			G.bag.gridy = 1;
+			Start.homeButton.setActionCommand("Home");
+			Start.homeButton.addActionListener(Start.al1);
+			G.pressurePT_Panel.add(Start.homeButton, G.bag);
+
+		}else if("Pressure PVnRT".equals(e.getActionCommand())) {
+
+			Start.frame.getContentPane().setVisible(false); //gets the frames current content pane and sets its visibility to false
+			Start.frame.remove(Start.frame.getContentPane()); //removes the current content pane from the frame
+			Start.frame.setContentPane(GasLaws.pressurePVnRT_Panel); //sets the content pane to the molar mass panel
+			Start.frame.getContentPane().setVisible(true); //gets the current content pane and sets its visibility to true to ensure visibility
+
+			//PVnRT equation being setup
+			G.bag.gridx = 1;
+			G.bag.gridy = 0;
+			G.pressurePVnRT_Panel.add(G.volumeTextField1, G.bag);
+
+			G.bag.gridx = 1;
+			G.bag.gridy = 0;
+			G.pressurePVnRT_Panel.add(new JLabel("="));
+
+			G.bag.gridx = 2;
+			G.bag.gridy = 0;
+			G.pressurePVnRT_Panel.add(G.molesTextField1, G.bag);
+
+			G.bag.gridx = 3;
+			G.bag.gridy = 0;
+			G.pressurePVnRT_Panel.add(G.tempTextField1, G.bag);
+
+			//Adds enter button to volumePVnRT_Panel
+			G.bag.gridx = 0;
+			G.bag.gridy = 1;
+			Buttons.enterButtonGasLaws.setActionCommand("Gas Enter");
+			Buttons.enterButtonGasLaws.addActionListener(Start.al1);
+			G.pressurePVnRT_Panel.add(Buttons.enterButtonGasLaws, G.bag);
+
+			G.bag.gridx = 7;
+			G.bag.gridy = 1;
+			Start.homeButton.setActionCommand("Home");
+			Start.homeButton.addActionListener(Start.al1);
+			G.pressurePVnRT_Panel.add(Start.homeButton, G.bag);
+
+		}else if("Pressure PN".equals(e.getActionCommand())) {
+
+			Start.frame.getContentPane().setVisible(false); //gets the frames current content pane and sets its visibility to false
+			Start.frame.remove(Start.frame.getContentPane()); //removes the current content pane from the frame
+			Start.frame.setContentPane(GasLaws.pressurePN_Panel); //sets the content pane to the molar mass panel
+			Start.frame.getContentPane().setVisible(true); //gets the current content pane and sets its visibility to true to ensure visibility
+
+			//Adds enter button to volumeVN_Panel
+			G.bag.gridx = 0;
+			G.bag.gridy = 1;
+			Buttons.enterButtonGasLaws.setActionCommand("Gas Enter");
+			Buttons.enterButtonGasLaws.addActionListener(Start.al1);
+			G.pressurePN_Panel.add(Buttons.enterButtonGasLaws, G.bag);
+
+			G.bag.gridx = 7;
+			G.bag.gridy = 1;
+			Start.homeButton.setActionCommand("Home");
+			Start.homeButton.addActionListener(Start.al1);
+			G.pressurePN_Panel.add(Start.homeButton, G.bag);
 			
 		}else if("Moles Enter".equals(e.getActionCommand())){
 			
@@ -201,7 +479,7 @@ public class MainFrameActionListener implements ActionListener{
 			Start.frame.getContentPane().setVisible(true); //gets the current content pane and sets its visibility to true to ensure visibility
 
 			//Moles home buttons
-			G.bag.gridx = 4;
+			G.bag.gridx = 7;
 			G.bag.gridy = 0;
 			Start.homeButton.setActionCommand("Home");
 			Start.homeButton.addActionListener(Start.al1);
@@ -215,7 +493,7 @@ public class MainFrameActionListener implements ActionListener{
 			Start.frame.getContentPane().setVisible(true); //gets the current content pane and sets its visibility to true to ensure visibility
 
 			//Temperature home buttons
-			G.bag.gridx = 4;
+			G.bag.gridx = 7;
 			G.bag.gridy = 0;
 			Start.homeButton.setActionCommand("Home");
 			Start.homeButton.addActionListener(Start.al1);
